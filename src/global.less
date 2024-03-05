@@ -1,0 +1,123 @@
+@import '~antd/es/style/variable.less';
+
+@tailwind utilities;
+@tailwind base;
+
+html,
+body,
+#root {
+  height: 100%;
+  overflow-x: hidden;
+}
+
+.colorWeak {
+  filter: invert(80%);
+}
+
+.ant-layout {
+  min-height: 100vh;
+}
+
+.ant-pro-sider.ant-layout-sider.ant-pro-sider-fixed {
+  left: unset;
+}
+
+.ant-pro-basicLayout-content .ant-pro-page-container {
+  margin: -12px -24px 0;
+}
+
+canvas {
+  display: block;
+}
+
+body {
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+@media (max-width: @screen-xs) {
+  .ant-table {
+    width: 100%;
+    overflow-x: auto;
+
+    &-thead > tr,
+    &-tbody > tr {
+      > th,
+      > td {
+        white-space: pre;
+
+        > span {
+          display: block;
+        }
+      }
+    }
+  }
+}
+
+// Compatible with IE11
+@media screen and(-ms-high-contrast: active), (-ms-high-contrast: none) {
+  body .ant-design-pro > .ant-layout {
+    min-height: 100vh;
+  }
+}
+
+.demoooooo-enter {
+  transform: translateX(100%);
+  opacity: 0;
+}
+
+.demoooooo-enter-active {
+  transform: translateX(0);
+  opacity: 1;
+  transition: all 0.3s ease-in-out;
+}
+
+.page-fade-enter {
+  transform: translateX(10%);
+  opacity: 0;
+}
+
+.page-fade-enter-active {
+  transform: translateX(0%);
+  opacity: 1;
+}
+
+.page-fade-exit {
+  transform: translateX(0%);
+  opacity: 1;
+}
+
+.page-fade-exit-active {
+  transform: translateX(-10%);
+  opacity: 0;
+}
+
+.page-fade-enter-active,
+.page-fade-exit-active {
+  transition: opacity 450ms, transform 450ms;
+}
+
+.ant-pro-sider-logo {
+  // background-color: red;
+
+  h1 {
+    font-size: 14px !important;
+  }
+}
+
+img,
+svg,
+video,
+canvas,
+audio,
+iframe,
+embed,
+object {
+  vertical-align: initial;
+}

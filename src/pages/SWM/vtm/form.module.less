@@ -1,0 +1,49 @@
+.container {
+  @apply absolute h-full right-0 top-0 bg-white rounded-l-lg shadow-lg;
+  @apply space-y-4 overflow-y-scroll;
+
+  width: 100%;
+  transition: width ease-in-out 0.3s;
+  will-change: width;
+
+  &.expanded {
+    width: 73.5vw;
+  }
+}
+
+.header {
+  &.expanded {
+    .anticon.anticon-arrow-left {
+      transform: rotateX(-180deg);
+    }
+  }
+}
+
+.iconBtn {
+  top: 15px;
+  left: -15px;
+  border: 0;
+  box-shadow: rgba(0, 0, 0, 0.1) 0 10px 50px;
+  transition: all ease-in 0.3s;
+
+  @apply sticky;
+
+  &.expanded {
+    transform: rotate(-180deg);
+  }
+}
+
+.form {
+  transition: all ease-in 0.3s;
+  @apply px-6;
+
+  &.expanded {
+    @apply grid-cols-3 grid-rows-1;
+  }
+}
+
+.actionBar {
+  @apply bottom-0 right-0 w-full px-4 py-3 z-10 bg-white text-right space-x-4;
+
+  box-shadow: rgba(0, 0, 0, 0.2) 0 18px 50px -10px;
+}

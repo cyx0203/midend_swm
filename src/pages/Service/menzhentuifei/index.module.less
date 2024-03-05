@@ -1,0 +1,12 @@
+.container {
+  @apply absolute h-full right-0 top-0 bg-white rounded-l-lg shadow-lg;
+  @apply space-y-4 overflow-y-scroll overflow-visible;
+
+  width: 100%;
+  transition: width ease-in-out 0.3s;
+  will-change: width;
+
+  &.expanded {
+    width: 73.5vw;
+  }
+}
